@@ -2,6 +2,20 @@
 
 Este proyecto permite gestionar un sorteo de amigo secreto. Los usuarios pueden agregar amigos a una lista, asegurándose de que no haya nombres repetidos ni vacíos, y luego realizar un sorteo aleatorio para asignar un amigo secreto a cada participante.
 
+```javascript
+function sortearAmigo() {
+    if (amigos.length < 2) {
+        mostrarMensaje('Debe haber al menos 2 amigos para sortear.', 'error');
+        return;
+    }
+
+    const indiceAleatorio = Math.floor(Math.random() * amigos.length);
+    const amigoSeleccionado = amigos[indiceAleatorio];
+
+    mostrarResultado(amigoSeleccionado);
+}
+```
+
 ## Características
 
 - **Agregar Amigos**: Los usuarios pueden ingresar nombres que se almacenan en una lista. Los nombres son validados para evitar duplicados y entradas vacías. Además, los nombres se convierten a formato capitalizado automáticamente antes de ser añadidos a la lista.
@@ -11,10 +25,9 @@ Este proyecto permite gestionar un sorteo de amigo secreto. Los usuarios pueden 
 
 ## Tecnologías Usadas
 
-- **HTML5**: Para la estructura básica de la aplicación.
-- **CSS3**: Para el diseño y los estilos de la interfaz.
-- **JavaScript (ES6+)**: Para la lógica de la aplicación, validación de datos y manejo de la interacción con el usuario.
-- **Google Fonts**: Para mejorar la tipografía de la interfaz con las fuentes **Inter** y **Merriweather**.
+![Javascript](https://img.shields.io/badge/Javascript-F0DB4F?style=for-the-badge&labelColor=black&logo=javascript&logoColor=F0DB4F)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 
 ## Requisitos
 
@@ -22,6 +35,8 @@ Este proyecto permite gestionar un sorteo de amigo secreto. Los usuarios pueden 
 
 ## Instalación
 
-1. Clona este repositorio en tu máquina local:
-   ```bash
+### 1. Clona este repositorio en tu máquina local:
+   ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+```bash
    git clone https://github.com/marcosguz/alura-challenge-amigo-secreto.git
+
